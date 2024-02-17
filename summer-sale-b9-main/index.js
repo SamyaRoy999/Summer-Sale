@@ -25,8 +25,12 @@ btn.addEventListener("click", function(){
 
     if(totalPriceSum > 200){
         if (copun === "SELL200") {
-            alert("copen is valid")
+            const discountElement = document.getElementById("discountPrice");
+            const discount = totalPriceSum * 0.2;
+            discountElement.innerText = discount
 
+            const total = totalPriceSum - discount;
+            document.getElementById("total").innerText = total;
         }else{
             alert("copun is invalid")
         }
